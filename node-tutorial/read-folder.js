@@ -1,4 +1,3 @@
-
 var fs = require('fs');
 
 var linesInFiles = function(folderName) {
@@ -7,7 +6,7 @@ var linesInFiles = function(folderName) {
     var linesInFiles = [];
 
     week1.forEach(function(menu) {
-    	var content = fs.readFileSync("./files/week1/" + menu, "utf8")
+    	var content = fs.readFileSync("./files/week1/" + menu, "utf8");
 
     	var lines = content.split('\n');
     	for(var i=0; i<lines.length; i++){
@@ -15,6 +14,7 @@ var linesInFiles = function(folderName) {
             linesInFiles.push(lines[i]);
     	}
     });
+     console.log(linesInFiles);
     return linesInFiles;
   }
 
@@ -30,5 +30,4 @@ exports.linesInFilesAsync = function(folderName, callback) {
 
 	//return linesInFilesAsync;
 }
-
 	
